@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyraPro Soluções</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #5bc441 !important;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            background: url('./src/hero.jpg') center/cover;
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        ._green-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #5bc441;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 5% 0);
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar-brand {
+            color: white !important;
+        }
+
+        /*Sections*/
+        .about-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .about-title {
+            color: #5bc441;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+
+        .values-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .values-title {
+            color: #5bc441;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2.5rem;
+        }
+
+        .value-item {
+            margin-bottom: 2rem;
+        }
+
+        .value-item h3 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .values-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        .sectors-section {
+            background-color: #5bc441;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .sectors-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .sector-card {
+            background: transparent;
+            overflow: hidden;
+            height: 100%;
+            border: none;
+        }
+
+        .sector-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+
+        .card-body{
+            padding: inherit;
+        }
+
+        .sector-card .card-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        .card-title{
+            margin-top: 10px;
+            color: #5bc441 !important;
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            width: 100%;
+        }
+
+        .sector-card .card-text {
+            font-size: 0.85rem;
+            color: #fff;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+
+
+
+        .methodology-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            position: relative;
+        }
+
+        .green-accent {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15%;
+            height: 350px;
+            background-color: #5bc441;
+        }
+
+        .methodology-title {
+            color: #5bc441;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .methodology-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .process-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .process-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .process-item h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .process-item p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+
+        .conduct-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .conduct-title {
+            color: #5bc441;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2.5rem;
+        }
+
+        .conduct-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .conduct-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .conduct-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #5bc441;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .conduct-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .conduct-content h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .conduct-content p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .conduct-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .green-overlay {
+            position: absolute;
+            bottom:-20px;
+            right: -10px;
+            width: 400px;
+            height: 400px;
+            background-color: #5bc441;
+        }
+
+        .methodology-img{
+            background: url('./src/Contact.jpg') center/cover;
+        }
+
+        .pre-footer {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .newsletter-input {
+            background-color: #5bc441;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .main-footer {
+            background-color: #5bc441;
+            padding: 30px 0;
+            color: white;
+        }
+
+        .footer-logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .address-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .logo {
+            width:150px;
+        }
+
+        .bg_service{
+            background: url("src/cover_service.jpg");
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./src/logo.png" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Acerca de nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#srvicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clientes">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parceiros">Parceiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-6 text-white fw-bold mb-4">
+                        CONSTRUIMOS UM MUNDO<br>
+                        AUTO-SUSTENTÁVEL POR<br>
+                        MEIO DAS TECNOLOGIAS E<br>
+                        SOLUÇÕES PERSONALIZADAS
+                    </h1>
+                    <div class="d-flex gap-3 mt-4">
+                        <div class="icon-box d-flex align-items-center justify-content-center">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#5bc441" d="M12,6V9L16,5L12,1V4C7.58,4 4,7.58 4,12C4,13.57 4.46,15.03 5.24,16.26L6.7,14.8C6.25,13.97 6,13 6,12C6,8.69 8.69,6 12,6M18.76,7.74L17.3,9.2C17.74,10.04 18,11 18,12C18,15.31 15.31,18 12,18V15L8,19L12,23V20C16.42,20 20,16.42 20,12C20,10.43 19.54,8.97 18.76,7.74Z" />
+                            </svg>
+                        </div>
+                        <div class="icon-box d-flex align-items-center justify-content-center">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#5bc441" d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" />
+                            </svg>
+                        </div>
+                        <div class="icon-box d-flex align-items-center justify-content-center">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#5bc441" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
+                            </svg>
+                        </div>
+                        <div class="icon-box d-flex align-items-center justify-content-center">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="#5bc441" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M17,17H7V7H17V17Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kreen-accent"></div>
+    </section>
+
+    <section class="about-section" id="sobre">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <img src="./src/about.jpg" alt="Team meeting" class="about-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ps-lg-4">
+                            <h2 class="about-title">
+                                QUEM SOMOS E<br>
+                                O QUE FAZEMOS
+                            </h2>
+                            <p class="about-text">
+                                Establecida em Angola há 15 anos, especializando-se em engenharia civil, fornecimento peças e acessos: petroleira e de serviços petroleiros, bem como logística de equipamentos industriais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [Valores] -->
+    <section class="values-section" id="clientes">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <h2 class="values-title">NOSSOS VALORES</h2>
+                        
+                        <div class="value-item">
+                            <h3>QUALIDADE:</h3>
+                            <p>Nossos projetos são realizados de acordo com os mais altos padrões do setor.</p>
+                        </div>
+
+                        <div class="value-item">
+                            <h3>CONFIABILIDADE:</h3>
+                            <p>Respeitamos sempre nossos compromissos em termos de prazos e qualidade.</p>
+                        </div>
+
+                        <div class="value-item">
+                            <h3>EXPERTISE LOCAL E INTERNACIONAL:</h3>
+                            <p>Equipe de profissionais qualificados e parcerias com fornecedores em todo o mundo.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ps-lg-4">
+                            <img src="./src/values.jpg" alt="Business professionals" class="values-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sectors-section" id="parceiros">
+        <div class="container">
+            <h2 class="sectors-title">SETORES DE INTERVENÇÃO E SOLUÇÕES TÉCNICAS</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg">
+                    <div class="sector-card card">
+                        <img src="./src/p2.jpg" alt="Petróleo e serviços" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">PETRÓLEO E SERVIÇOS PETROLEIROS</h5>
+                            <p class="card-text">Fornecimento de equipamentos e serviços para industria petroleira.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <div class="sector-card card">
+                        <img src="./src/p1.png" alt="Sistemas de elevação" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">PETRÓLEO E SERVIÇOS PETROLÍFEROS</h5>
+                            <p class="card-text">Guindastes, içantes e outros equipamentos para movimentação de cargas.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <div class="sector-card card">
+                        <img src="./src/p3.png" alt="Equipamentos de segurança" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">EQUIPAMENTOS DE SEGURANÇA INDUSTRIAL</h5>
+                            <p class="card-text">Proteção dos trabalhadores e equipamentos para segurança em atividades industriais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <div class="sector-card card">
+                        <img src="./src/p3.png" alt="Equipamentos de segurança" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">EQUIPAMENTOS DE SEGURANÇA INDUSTRIAL</h5>
+                            <p class="card-text">Proteção dos trabalhadores e equipamentos para segurança em atividades industriais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <div class="sector-card card">
+                        <img src="./src/p3.png" alt="Equipamentos de segurança" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">EQUIPAMENTOS DE SEGURANÇA INDUSTRIAL</h5>
+                            <p class="card-text">Proteção dos trabalhadores e equipamentos para segurança em atividades industriais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section bg_service" id="srvicos">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <img src="./src/Bg_info.png" alt="Team meeting" class="about-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ps-lg-5">
+                            <h1 class="about-title text-white">
+                                NOSSOS<br/>
+                                PRINCIPAIS<br/>
+                                SERVIÇOS<br/>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="methodology-section">
+        <div class="green-accent"></div>
+        <div class="container position-relative">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <img src="./src/conduta.png" alt="Construction site with workers" class="methodology-image">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="methodology-title">
+                        METODOLOGIA<br>
+                        E PROCESSO
+                    </h2>
+                    
+                    <ul class="process-list">
+                        <li class="process-item">
+                            <h3>ANÁLISE DAS NECESSIDADES DO CLIENTE:</h3>
+                            <p>Trabalhamos em estreita colaboração com nossos clientes para entender suas necessidades específicas.</p>
+                        </li>
+                        
+                        <li class="process-item">
+                            <h3>FORNECIMENTO DE EQUIPAMENTOS:</h3>
+                            <p>Selecionamos os melhores fornecedores e equipamentos com a melhor relação custo-benefício.</p>
+                        </li>
+                        
+                        <li class="process-item">
+                            <h3>PLANEJAMENTO E EXECUÇÃO:</h3>
+                            <p>Cada projeto é rigorosamente planejado e regularmente monitorado para garantir dentro do prazo e do orçamento.</p>
+                        </li>
+                        
+                        <li class="process-item">
+                            <h3>CONTROLE DE QUALIDADE:</h3>
+                            <p>Garantimos que todos os equipamentos fornecidos estejam nos mais altos padrões de qualidade.</p>
+                        </li>
+                        
+                        <li class="process-item">
+                            <h3>ENTREGA E INSTALAÇÃO:</h3>
+                            <p>Coordenação logística completa, desde a importação até a entrega final.</p>
+                        </li>
+                        
+                        <li class="process-item">
+                            <h3>CUSTOS E CONTROLE GERAL:</h3>
+                            <p>Através de parcerias estratégicas, negociamos os preços mais competitivos.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="conduct-section">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="conduct-title">CONDUTA</h2>
+                    
+                    <ul class="conduct-list">
+                        <li class="conduct-item">
+                            <div class="conduct-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"></path>
+                                </svg>
+                            </div>
+                            <div class="conduct-content">
+                                <h3>INTEGRIDADE:</h3>
+                                <p>Atuar com transparência e honestidade em todos os nossos relacionamentos.</p>
+                            </div>
+                        </li>
+
+                        <li class="conduct-item">
+                            <div class="conduct-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
+                                </svg>
+                            </div>
+                            <div class="conduct-content">
+                                <h3>RESPEITO:</h3>
+                                <p>Valorizar as diferenças e promover a diversidade e a inclusão.</p>
+                            </div>
+                        </li>
+
+                        <li class="conduct-item">
+                            <div class="conduct-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"></path>
+                                </svg>
+                            </div>
+                            <div class="conduct-content">
+                                <h3>EXCELÊNCIA:</h3>
+                                <p>Oferecer serviços de alta qualidade, atendendo aos mais rígidos padrões.</p>
+                            </div>
+                        </li>
+
+                        <li class="conduct-item">
+                            <div class="conduct-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6"></path>
+                                </svg>
+                            </div>
+                            <div class="conduct-content">
+                                <h3>RESPONSABILIDADE:</h3>
+                                <p>Adotar práticas sustentáveis e responsáveis perante a sociedade e o meio ambiente.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 position-relative">
+                    <img src="./src/conduta2.jpg" alt="Team hands together" class="conduct-image" style="z-index:1;">
+                    <div class="green-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="methodology-section methodology-img" id="contactos">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <img src="./src/conduta.png" alt="Construction site with workers" class="methodology-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pre-footer">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <p class="mb-4 fw-bold">Receba em primeira mão notificações sobre nossos serviços e produtos da empresa assinando a nossa Newsletter.</p>
+                    <input type="email" class="newsletter-input" placeholder="Insere seu e-mail">
+                </div>
+                <div class="col-lg-6 fw-bold">
+                    <p>Possuímos competências sólidas e diversificadas para apoiar projetos de grande escala em Angola e internacionalmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <img src="./src/logo.png" width="120" alt="MyraPro Logo" class="footer-logo">
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0 d-flex align-items-center">
+                    <svg class="address-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5s1.12,-2.5 2.5,-2.5 2.5,1.12 2.5,2.5 -1.12,2.5 -2.5,2.5z"/>
+                    </svg>
+                    <span>64-A Avenida Comandante Che Guevara, Luanda, República de Angola</span>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
